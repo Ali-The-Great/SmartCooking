@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "69914261805",
+    "project_id": "smartcooking-213a2",
+    "storage_bucket": "smartcooking-213a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69914261805:android:153dc27450b5979e27fba4",
+        "android_client_info": {
+          "package_name": "com.example.smartcooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69914261805-g826hoaep9gtsf9pgfu8901qointkufp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smartcooking",
+            "certificate_hash": "71793eb08d44f91450138ff93eb718c75934b7a1"
+          }
+        },
+        {
+          "client_id": "69914261805-n7uoqi9381sna43pmtatacjqqkoo659o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlj1YXdB7NV2wGRRkAOLSu8Van0WCefiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "69914261805-n7uoqi9381sna43pmtatacjqqkoo659o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,11 +1,13 @@
 package com.example.smartcooking
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.util.Patterns
 import android.widget.Toast
+//import com.example.cooking.MainPageActivity
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -25,10 +27,15 @@ class RegisterActivity : AppCompatActivity() {
         val registerButton: Button = findViewById(R.id.registerButton)
         registerButton.setOnClickListener {
             if (validateInput(usernameEditText, emailEditText, passwordEditText)) {
-                Toast.makeText(this,"Register Successful",Toast.LENGTH_SHORT).show()
-            }
-            else{
-                Toast.makeText(this,"Register unsuccessful",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Register Successful", Toast.LENGTH_SHORT).show()
+
+                // Start the SearchFragment
+                val intent = Intent(this, HomePageActivity::class.java)
+                intent.putExtra("selectedMenuItem", R.id.menu_searcher)
+                startActivity(intent)
+                finish() // Optional: Close the current activity to prevent going back to the registration screen
+            } else {
+                Toast.makeText(this, "Register unsuccessful", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -47,11 +54,16 @@ class RegisterActivity : AppCompatActivity() {
         return regex.toRegex().matches(password)
     }
 
-    private fun validateInput(usernameEditText: EditText, emailEditText: EditText, passwordEditText: EditText): Boolean {
+    private fun validateInput(
+        usernameEditText: EditText,
+        emailEditText: EditText,
+        passwordEditText: EditText
+    ): Boolean {
         var isValid = true
 
         if (!isValidUsername(usernameEditText.text.toString())) {
-            usernameEditText.error = "Invalid username. Must be at least 3 characters and contain only letters, numbers, dots, underscores, and hyphens."
+            usernameEditText.error =
+                "Invalid username. Must be at least 3 characters and contain only letters, numbers, dots, underscores, and hyphens."
             isValid = false
         }
 
@@ -61,7 +73,8 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         if (!isValidPassword(passwordEditText.text.toString())) {
-            passwordEditText.error = "Invalid password. Must be at least 8 characters and contain at least one digit, lowercase letter, uppercase letter, and special character."
+            passwordEditText.error =
+                "Invalid password. Must be at least 8 characters and contain at least one digit, lowercase letter, uppercase letter, and special character."
             isValid = false
         }
 

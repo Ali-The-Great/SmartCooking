@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200">
+
+
+    <Button
+        android:id="@+id/veganButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="15dp"
+        android:text="Vegan"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/GlutenFree"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Gluten-Free"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/veganButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/veganButton"
+        app:layout_constraintTop_toBottomOf="@+id/veganButton" />
+
+    <Button
+        android:id="@+id/DairyFree"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Dairy-Free"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/GlutenFree"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/GlutenFree"
+        app:layout_constraintTop_toBottomOf="@+id/GlutenFree" />
+
+    <Button
+        android:id="@+id/LowCarb"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Low Carb"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/DairyFree"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/DairyFree"
+        app:layout_constraintTop_toBottomOf="@+id/DairyFree" />
+
+    <Button
+        android:id="@+id/HighProtein"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="High Protein"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/LowCarb"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/LowCarb"
+        app:layout_constraintTop_toBottomOf="@+id/LowCarb" />
+
+    <EditText
+        android:id="@+id/recipeNameEditText"
+        android:layout_width="367dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:hint="Enter Recipe Name"
+        app:layout_constraintEnd_toEndOf="@+id/HighProtein"
+        app:layout_constraintStart_toStartOf="@+id/HighProtein"
+        app:layout_constraintTop_toBottomOf="@+id/HighProtein" />
+
+    <Button
+        android:id="@+id/SearcherButton"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Search"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/recipeNameEditText"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/recipeNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/recipeNameEditText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_chat"
+        android:title="chat"
+        android:icon="@mipmap/chat" />
+
+    <item
+        android:id="@+id/menu_searcher"
+        android:title="search"
+        android:icon="@mipmap/search" />
+
+    <item
+        android:id="@+id/menu_recipes"
+        android:title="recipes"
+        android:icon="@mipmap/spoon" />
+
+</menu>
